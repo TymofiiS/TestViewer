@@ -10,11 +10,12 @@
 </head>
 <body>
     <canvas id="myCanvas"></canvas>
+    <div id="treeViewContainer"></div>
 </body>
 
 <script type="module">
 
-    import { Viewer, XKTLoaderPlugin } from
+    import { Viewer, XKTLoaderPlugin, TreeViewPlugin} from
         "./xeokit-sdk.min.es.js";
 
 
@@ -34,6 +35,13 @@
 
     viewer.cameraControl.followPointer = true;
     // Test camera end
+    
+    // Test Tree view start
+        const treeView = new TreeViewPlugin(viewer, {
+        containerElement: document.getElementById("treeViewContainer"),
+        autoExpandDepth: 3 // Initially expand the root tree node
+    });
+    // Test Tree view end
 
     const xktLoader = new XKTLoaderPlugin(viewer);
 
