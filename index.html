@@ -21,6 +21,19 @@
     const viewer = new Viewer({
         canvasId: "myCanvas"
     });
+    
+    
+    // Test camera start
+    const scene = viewer.scene;
+    const cameraFlight = viewer.cameraFlight;
+    const camera = scene.camera;
+
+    viewer.camera.eye = [-8.23, 10.67, 35.26];
+    viewer.camera.look = [4.39, 3.72, 8.89];
+    viewer.camera.up = [0.10, 0.97, -0.20];
+
+    viewer.cameraControl.followPointer = true;
+    // Test camera end
 
     const xktLoader = new XKTLoaderPlugin(viewer);
 
