@@ -1,0 +1,12 @@
+        #storeys {
+            position: absolute;
+            left: 10px;
+            top: 60px;
+            margin-top: 20px;
+            overflow-y: scroll;
+            height: calc(100% - 120px);
+            margin-bottom: 10px;
+            width: 320px;
+            pointer-events: all;
+            opacity: 0.8;
+        }
