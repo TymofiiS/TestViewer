@@ -47,7 +47,7 @@
 
     const model = xktLoader.load({
         id: "myModel",
-        src: "../assets/models/xkt/v8/ifc/Schependomlaan.ifc.xkt",
+        src: "Test.xkt",
         edges: true
     });
 
@@ -169,51 +169,6 @@
             };
         }
     }
-    
-    
-
-    import { Viewer, XKTLoaderPlugin, TreeViewPlugin, FastNavPlugin} from
-        "./xeokit-sdk.min.es.js";
-
-
-    const viewer = new Viewer({
-        canvasId: "myCanvas"
-    });
-    
-    
-    // Test camera start
-    const scene = viewer.scene;
-    const cameraFlight = viewer.cameraFlight;
-    const camera = scene.camera;
-
-    viewer.camera.eye = [-8.23, 10.67, 35.26];
-    viewer.camera.look = [4.39, 3.72, 8.89];
-    viewer.camera.up = [0.10, 0.97, -0.20];
-
-    viewer.cameraControl.followPointer = true;
-    // Test camera end
-    
-    // Disabling expensive rendering effects start
-    new FastNavPlugin(viewer, {
-        pbrEnabled: true,
-        saoEnabled: true,
-        edgesEnabled: true
-    });
-    // Disabling expensive rendering effects end
-    
-    // Test Tree view start
-        const treeView = new TreeViewPlugin(viewer, {
-        containerElement: document.getElementById("treeViewContainer"),
-        autoExpandDepth: 3 // Initially expand the root tree node
-    });
-    // Test Tree view end
-
-    const xktLoader = new XKTLoaderPlugin(viewer);
-
-    const modelNode = xktLoader.load({
-        id: "myModel",
-        src: "Test.xkt"
-    });
-
+ 
 </script>
 </html>
