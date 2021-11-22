@@ -53,14 +53,20 @@
     // Test Tree view end
 
     const xktLoader = new XKTLoaderPlugin(viewer);
+    const xktLoaderSite = new XKTLoaderPlugin(viewer);
 
     const modelNode = xktLoader.load({
         id: "myModel",
         src: "ram.ifc.xkt"
     });
     
-    modelNode.on("loaded", function () {
-    viewer.cameraFlight.flyTo(modelNode);
+    const modelSite = xktLoader.load({
+        id: "myModel",
+        src: "ram-site.ifc.xkt"
+    });
+    
+    modelSite.on("loaded", function () {
+    viewer.cameraFlight.flyTo(modelSite);
     });
 
 </script>
