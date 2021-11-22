@@ -53,6 +53,7 @@
     // Test Tree view end
 
     const xktLoader = new XKTLoaderPlugin(viewer);
+    const xktLoaderNm = new XKTLoaderPlugin(viewer);
     const xktLoaderSite = new XKTLoaderPlugin(viewer);
 
     const modelNode = xktLoader.load({
@@ -60,8 +61,13 @@
         src: "ram-uc.xkt"
     });
     
+    const modelNodeNm = xktLoader.load({
+        id: "myModelNm",
+        src: "ram-nm.xkt"
+    });
+    
     const modelSite = xktLoaderSite.load({
-        id: "myModel",
+        id: "myModelS",
         src: "ram-site.ifc.xkt"
     });
     
