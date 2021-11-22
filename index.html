@@ -58,6 +58,9 @@
         id: "myModel",
         src: "ram.ifc.xkt"
     });
+    
+        model.on("loaded", function () {
+        viewer.cameraFlight.flyTo(model);
 
 </script>
 </html>
