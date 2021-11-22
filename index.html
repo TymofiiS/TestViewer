@@ -56,10 +56,10 @@
     const xktLoaderNm = new XKTLoaderPlugin(viewer);
     const xktLoaderSite = new XKTLoaderPlugin(viewer);
 
-    const modelNode = xktLoader.load({
-        id: "myModel",
-        src: "test-rvt-example-pl.xkt"
-    });
+    //const modelNode = xktLoader.load({
+    //    id: "myModel",
+    //    src: "test-rvt-example.ifc.xkt"
+    //});
     
     //const modelNodeNm = xktLoader.load({
     //    id: "myModelNm",
@@ -67,8 +67,8 @@
     //});
     
     const modelSite = xktLoaderSite.load({
-        id: "myModelS",
-        src: "test-rvt-example.ifc.xkt"
+        id: "myModelS",  
+        src: "test-rvt-example-pl.xkt"
     });
     
     modelSite.on("loaded", function () {
